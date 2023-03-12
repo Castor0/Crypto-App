@@ -13,21 +13,23 @@ const CurrencyConverter =() => {
     
     const convert = () => {
 
-        const options = {
-          method: 'GET',
-          url: 'https://alpha-vantage.p.rapidapi.com/query',
-          params: {to_currency: chosenSecondaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', from_currency: chosenPrimaryCurrency},
-          headers: {
-            'X-RapidAPI-Key': 'd33bcfb4b7mshfa35f5acb22b2b3p14b3f0jsn4333c2331e4b',
-            'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
-          }
-        };
         
-        axios.request(options).then( (response) => {
-            console.log(response.data);
-        }).catch( (error) => {
-            console.error(error);
-        });
+
+const options = {
+  method: 'GET',
+  url: 'https://alpha-vantage.p.rapidapi.com/query',
+  params: {to_currency: chosenSecondaryCurrency, function: 'CURRENCY_EXCHANGE_RATE', from_currency: chosenPrimaryCurrency},
+  headers: {
+    'X-RapidAPI-Key': 'ccc690bebemsh3d2d103e2716209p1f3507jsn58261c964ccd',
+    'X-RapidAPI-Host': 'alpha-vantage.p.rapidapi.com'
+  }
+};
+
+axios.request(options).then( (response) => {
+	console.log(response.data);
+}).catch( (error) => {
+	console.error(error);
+});
     }
 
        
